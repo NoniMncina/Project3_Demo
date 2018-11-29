@@ -8,9 +8,10 @@ use DB;
 
 class CategoriesController extends Controller
 {
-    public function __construct() {
+    /**public function __construct() {
         return $this->middleware(['auth','permission:manage']);
     }
+    */
 
     /**
      * Display a listing of the resource.

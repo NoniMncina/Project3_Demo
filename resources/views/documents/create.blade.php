@@ -8,9 +8,7 @@
     </div>
     <div class="col m11 s12">
       <div class="row">
-        <h3 class="flow-text"><i class="material-icons">folder</i> Upload Document
-          <a href="/documents/create" class="btn waves-effect grey darken-10 right tooltipped" data-position="left" data-delay="50" data-tooltip="Upload New Document"><i class="material-icons">file_upload</i> New</a>
-        </h3>
+        <h3 class="flow-text"><i class="material-icons">folder</i> Upload Document</h3>
         <div class="divider"></div>
       </div>
       <div class="row">

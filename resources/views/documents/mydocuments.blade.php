@@ -44,36 +44,20 @@
                     @endif
                   </td>
                   <td>
-                    @can('read')
-                    {!! Form::open() !!}                    
+                                   
                     <a href="documents/{{ $doc->id }}" class="tooltipped" data-position="left" data-delay="50" data-tooltip="View Details"><i class="material-icons">visibility</i></a>
-                    {!! Form::close() !!}
-                    {!! Form::open() !!}
                     <a href="documents/open/{{ $doc->id }}" class="tooltipped" data-position="left" data-delay="50" data-tooltip="Open"><i class="material-icons">open_with</i></a>
-                    {!! Form::close() !!}
-                    @endcan
-                    {!! Form::open() !!}
-                    @can('download')
                     <a href="documents/download/{{ $doc->id }}" class="tooltipped" data-position="left" data-delay="50" data-tooltip="Download"><i class="material-icons">file_download</i></a>
-                    @endcan
-                    {!! Form::close() !!}
-                    {!! Form::open() !!}
-                    @can('shared')
                     <a href="#" class="tooltipped" data-position="left" data-delay="50" data-tooltip="Share"><i class="material-icons">share</i></a>
-                    @endcan
-                    {!! Form::close() !!}
-                    {!! Form::open() !!}
-                    @can('edit')
                     <a href="documents/{{ $doc->id }}/edit" class="tooltipped" data-position="left" data-delay="50" data-tooltip="Edit"><i class="material-icons">mode_edit</i></a>
-                    @endcan
-                    {!! Form::close() !!}
+                
                     <!-- DELETE using link -->
                     {!! Form::open(['action' => ['DocumentsController@destroy', $doc->id],
                     'method' => 'DELETE',
                     'id' => 'form-delete-documents-' . $doc->id]) !!}
-                    @can('delete')
+                    <!--@can('delete')-->
                     <a href="" class="data-delete tooltipped" data-position="left" data-delay="50" data-tooltip="Delete" data-form="documents-{{ $doc->id }}"><i class="material-icons">delete</i></a>
-                    @endcan
+                    <!--@endcan-->
                     {!! Form::close() !!}
                   </td>
                 </tr>

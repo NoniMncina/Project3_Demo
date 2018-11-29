@@ -17,15 +17,16 @@ class UsersController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     public function __construct() {
+     /**public function __construct() {
         return $this->middleware(['auth','permission:manage']);
         // $this->middleware(['auth','admin']);
      }
+     */
 
     public function index()
     {
-        // $users = User::where('status',true)->get();
-        if (auth()->user()->hasRole('Root'))
+        $users = User::where('status',true)->get();
+        /**if (auth()->user()->hasRole('Root'))
         {
           $users = User::where('status',true)->get();
         }
@@ -37,7 +38,7 @@ class UsersController extends Controller
         else
         {
           return redirect('/dashboard')->with('error','Access Denied!');
-        }
+        }*/
         // get all dept
         $depts = Department::all();
         // get roles
@@ -105,8 +106,8 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        $user = User::find($id);
-        return view('users.show')->with('user',$user);
+        //$user = User::find($id);
+        return view('users.show');
     }
 
     /**

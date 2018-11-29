@@ -182,80 +182,9 @@
       </div>
       <div class="card z-depth-2">
         <div class="card-content">
-          <!-- Switch -->
-          <div class="switch" style="margin-bottom: 2em;">
-            <label>
-              Grid View
-              <input type="checkbox">
-              <span class="lever"></span>
-              Table View
-            </label>
-          </div>
-          <!-- FOLDER View -->
-          <div id="folderView">
-            <div class="row">
-              <form action="/sort" method="post" id="sort-form">
-                {{ csrf_field() }}
-                <div class="input-field col m2 s12">
-                  <select name="filetype" id="sort">
-                    <option value="" disabled selected>Choose</option>
-                    <option value="image/jpeg" @if($filetype === 'image/jpeg') selected @endif>Image</option>
-                    <option value="video/mp4" @if($filetype === 'video/mp4') selected @endif>Video</option>
-                    <option value="audio/mpeg" @if($filetype === 'audio/mpeg') selected @endif>Audio</option>
-                    <option value="application/vnd.openxmlformats-officedocument.wordprocessingml.document">Word Documents</option>
-                    <option value="">Others</option>
-                  </select>
-                  <label>Sort By File Type</label>
-                </div>
-              </form>
-              <form action="/search" method="post" id="search-form">
-                {{ csrf_field() }}
-                <div class="input-field col m4 s12 right">
-                  <i class="material-icons prefix">search</i>
-                  <input type="text" name="search" id="search" placeholder="Search Here ...">
-                  <label for="search"></label>
-                </div>
-              </form>
-            </div>
-            <br>
-            <div class="row">
-              @if(count($docs) > 0)
-                @foreach($docs as $doc)
-                <div class="col m2 s6" id="tr_{{$doc->id}}">
-                  <div class="card hoverable indigo lighten-5 task" data-id="{{ $doc->id }}">
-                    <input type="checkbox" class="filled-in sub_chk" id="chk_{{$doc->id}}" data-id="{{$doc->id}}">
-                    <label for="chk_{{$doc->id}}"></label>
-                    <a href="/documents/{{ $doc->id }}">
-                      <div class="card-content2 center">
-                        @if(strpos($doc->mimetype, "image") !== false)
-                        <i class="material-icons">image</i>
-                        @elseif(strpos($doc->mimetype, "video") !== false)
-                        <i class="material-icons">ondemand_video</i>
-                        @elseif(strpos($doc->mimetype, "audio") !== false)
-                        <i class="material-icons">music_video</i>
-                        @elseif(strpos($doc->mimetype,"text") !== false)
-                        <i class="material-icons">description</i>
-                        @elseif(strpos($doc->mimetype,"application/pdf") !== false)
-                        <i class="material-icons">picture_as_pdf</i>
-                        @elseif(strpos($doc->mimetype, "application/vnd.openxmlformats-officedocument") !== false)
-                        <i class="material-icons">library_books</i>
-                        @else
-                        <i class="material-icons">folder_open</i>
-                        @endif
-                        <h6>{{ $doc->name }}</h6>
-                        <p>{{ $doc->filesize }}</p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                @endforeach
-              @else
-                <h5 class="teal-text">No Document has been uploaded</h5>
-              @endif
-            </div>
-          </div>
+         
           <!-- TABLE View -->
-          <div id="tableView" class="unshow">
+          <div id="tableView">
             <div class="row">
               <table class="bordered centered highlight responsive-table" id="myDataTable">
                 <thead>
@@ -289,37 +218,9 @@
                         @endif
                       </td>
                       <td>
-                        @can('read')
-                        {!! Form::open() !!}
                         <a href="documents/{{ $doc->id }}" class="tooltipped" data-position="left" data-delay="50" data-tooltip="View Details"><i class="material-icons">visibility</i></a>
-                        {!! Form::close() !!}
-                        {!! Form::open() !!}
                         <a href="documents/open/{{ $doc->id }}" class="tooltipped" data-position="left" data-delay="50" data-tooltip="Open"><i class="material-icons">open_with</i></a>
-                        {!! Form::close() !!}
-                        @endcan
-                        {!! Form::open() !!}
-                        @can('download')
                         <a href="documents/download/{{ $doc->id }}" class="tooltipped" data-position="left" data-delay="50" data-tooltip="Download"><i class="material-icons">file_download</i></a>
-                        @endcan
-                        {!! Form::close() !!}
-                        <!-- SHARE using link -->
-                        {!! Form::open(['action' => ['ShareController@update', $doc->id], 'method' => 'PATCH', 'id' => 'form-share-documents-' . $doc->id]) !!}
-                        @can('shared')
-                        <a href="" class="data-share tooltipped" data-position="left" data-delay="50" data-tooltip="Share" data-form="documents-{{ $doc->id }}"><i class="material-icons">share</i></a>
-                        @endcan
-                        {!! Form::close() !!}
-                        {!! Form::open() !!}
-                        @can('edit')
-                        <a href="documents/{{ $doc->id }}/edit" class="tooltipped" data-position="left" data-delay="50" data-tooltip="Edit"><i class="material-icons">mode_edit</i></a>
-                        @endcan
-                        {!! Form::close() !!}
-                        <!-- DELETE using link -->
-                        {!! Form::open(['action' => ['DocumentsController@destroy', $doc->id],
-                        'method' => 'DELETE', 'id' => 'form-delete-documents-' . $doc->id]) !!}
-                        @can('delete')
-                        <a href="" class="data-delete tooltipped" data-position="left" data-delay="50" data-tooltip="Delete" data-form="documents-{{ $doc->id }}"><i class="material-icons">delete</i></a>
-                        @endcan
-                        {!! Form::close() !!}
                       </td>
                     </tr>
                     @endforeach
@@ -343,7 +244,7 @@
 			
 			<a href="#" class="chat-close">x</a>
 
-			<h4>John Doe</h4>
+			<h4>Thando</h4>
 
 			<span class="chat-message-counter">3</span>
 
@@ -361,9 +262,9 @@
 						
 						<span class="chat-time">13:35</span>
 
-						<h5>John Doe</h5>
+						<h5>Thando</h5>
 
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, explicabo quasi ratione odio dolorum harum.</p>
+						<p>Please share your history research document</p>
 
 					</div> <!-- end chat-message-content -->
 
@@ -379,9 +280,9 @@
 						
 						<span class="chat-time">13:37</span>
 
-						<h5>Marco Biedermann</h5>
+						<h5>Nikkie</h5>
 
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, nulla accusamus magni vel debitis numquam qui tempora rem voluptatem delectus!</p>
+						<p>Sorry, I'm not really done with it but I'll share once I've finished compling it.</p>
 
 					</div> <!-- end chat-message-content -->
 
@@ -399,7 +300,7 @@
 
 						<h5>Messanger</h5>
 
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+						<p>sfri erwtuiyh weruougtiwajfu  eoiruj;oiws weroiurifs.</p>
 
 					</div> <!-- end chat-message-content -->
 

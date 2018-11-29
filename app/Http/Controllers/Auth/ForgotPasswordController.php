@@ -25,6 +25,10 @@ class ForgotPasswordController extends Controller
      *
      * @return void
      */
+    protected function redirectTo()
+    {
+        return view('./auth/passwords/reset');
+    }
     public function __construct()
     {
         $this->middleware('guest');

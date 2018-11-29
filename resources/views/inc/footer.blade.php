@@ -19,11 +19,45 @@
   <div class="modal-content">
     <h4>Help</h4>
     <p>
-      This guide will lead you the way to get friendly with EDMS, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      File Location
+      <br>
+          This box allows you to browse your local computer to find a file. Click 
+          the "Browse..." button to bring up a popup prompt. Navigate to your file, 
+          then click "Open". Once you have done this, the location of your file should 
+          show up in the text box, and you can continue to fill out the rest of the 
+          form.
+        <br>
+        <br>
+      Category
+      <br>
+          This box allows you to define which category your document corresponds
+          to. Make sure this fits, because many people will search for documents based 
+          on this field.
+        <br>
+        <br>
+      Department
+      <br>
+          This box allows you to define, for each department, the corresponding access 
+          rights you want users to have. 
+        <br>
+        <br>
+      Authority
+      <br>
+          This box allows you to define a specific type of access for departments,
+          including 
+        <br>
+        <br>          
+      Description
+      <br>
+          This box allows you to attach a short description to the file, which
+          will be used in the file listings, and also during searches. Try to be as
+          precise as possible. 
+          <br>
+          <br>
+      Note: There is also an "All departments" field, which you can use to set 
+      all the departments to the same, whether it be admin, read, view, etc..<br>
+      You may also notice as you are setting permissions that you can go "back" 
+      to another department, and the settings are retained.
     </p>
   </div>
   <div class="modal-footer">

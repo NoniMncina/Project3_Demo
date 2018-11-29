@@ -9,7 +9,7 @@
         <div class="divider"></div>
       </div>
       <div class="section">
-        <a href="/documents">
+        <a href="documents">
           <div class="col m4 s6">
             <div class="card hoverable grey darker-10  white-text">
               <div class="card-content">
@@ -19,7 +19,7 @@
             </div>
           </div>
         </a>
-        <a href="/users">
+        <a href="users">
           <div class="col m4 s6">
             <div class="card hoverable grey darker-10 white-text">
               <div class="card-content">
@@ -29,7 +29,7 @@
             </div>
           </div>
         </a>
-        <a href="/departments">
+        <a href="departments">
           <div class="col m4 s6">
             <div class="card hoverable grey darker-10  white-text">
               <div class="card-content">
@@ -39,7 +39,7 @@
             </div>
           </div>
         </a>
-        <a href="/roles">
+        <a href="roles">
           <div class="col m4 s6">
             <div class="card hoverable grey darker-10  white-text">
               <div class="card-content">
@@ -49,7 +49,7 @@
             </div>
           </div>
         </a>
-        <a href="/logs">
+        <a href="logs">
           <div class="col m4 s6">
             <div class="card hoverable grey darker-10  white-text">
               <div class="card-content">
@@ -59,7 +59,7 @@
             </div>
           </div>
         </a>
-        <a href="/categories">
+        <a href="categories">
           <div class="col m4 s6">
             <div class="card hoverable grey darker-10  white-text">
               <div class="card-content">

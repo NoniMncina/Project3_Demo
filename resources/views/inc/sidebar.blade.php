@@ -33,15 +33,15 @@
     @endhasanyrole
     @hasanyrole('Admin|User')
     <li class="collection-item avatar">
-      <a href="/mydocuments" class="tooltipped" data-position="right" data-delay="50" data-tooltip="My Documents"><i class="material-icons circle pink darken-1">folder_shared</i></a>
+      <a href="mydocuments" class="tooltipped" data-position="right" data-delay="50" data-tooltip="My Documents"><i class="material-icons circle pink darken-1">folder_shared</i></a>
     </li>
     @endhasanyrole
   </ul>
 </div>
 <!-- ======================================================================= -->
-<ul id="slide-out" class="side-nav">
-  <li><div class="user-view">
-    <div class="background">
+<ul id="slide-out grey" class="side-nav grey">
+  <li><div class="user-view grey">
+    <div class="background grey">
       <img src="/storage/images/ytu.jpg" width="100%">
     </div>
   </div></li>
@@ -60,7 +60,7 @@
   @endhasanyrole
   @hasanyrole('Admin|User')
   <li>
-    <a href="/mydocuments"><i class="material-icons">folder_shared</i>My Documents</a>
+    <a href="mydocuments"><i class="material-icons">folder_shared</i>My Documents</a>
   </li>
   @endhasanyrole
 </ul>

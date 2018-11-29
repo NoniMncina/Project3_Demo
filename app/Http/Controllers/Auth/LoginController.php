@@ -28,11 +28,11 @@ class LoginController extends Controller
     // protected $redirectTo = '/home';
     protected function redirectTo()
     {
-        if(auth()->user()->hasRole('Root')) {
-            return '/dashboard';
+        if(auth()->user()->hasRole('User')) {
+            return 'documents';
         }
         elseif (auth()->user()->hasRole('Admin')) {
-            return '/users';
+            return '/dashboard';
         }
         else {
             return '/documents';

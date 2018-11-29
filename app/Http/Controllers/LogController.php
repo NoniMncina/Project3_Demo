@@ -6,9 +6,10 @@ use Illuminate\Http\Request;
 
 class LogController extends Controller
 {
-    public function __construct() {
+    /** public function __construct() {
         return $this->middleware(['auth','permission:manage']);
     }
+    */
 
     // public function testAddLog()
     // {

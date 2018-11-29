@@ -11,7 +11,7 @@
       @else
         <li><a href='pages/shared'>Shared</a></li>
         <li><a href='documents'>Documents</a></li>
-        <li><a href="/mydocuments">My Documents</a></li>
+        <li><a href="mydocuments">My Documents</a></li>
         <li><a href='categories'>Categories</a></li>
         @hasanyrole('Root|Admin')
         <li><a href='users'>Users</a></li>
@@ -71,7 +71,7 @@
 <!-- Dropdown Structure -->
 <ul id="dropdown1" class="dropdown-content">
   <li><a href='profile'>My Account</a></li>
-  <li><a href='documents/mydocuments'>My Documents</a></li>
+  <li><a href='mydocuments'>My Documents</a></li>
   <li>
       <a href="{{ route('logout') }}"
           onclick="event.preventDefault();

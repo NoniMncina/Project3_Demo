@@ -1,7 +1,7 @@
 @extends('layouts.app')
 <style>
       body {
-        background:url(./images/background.jpg);
+        background:url(public/images/background.jpg);
         display: flex;
         min-height: 100vh;
         flex-direction: column;
@@ -9,11 +9,11 @@
 </style>
 
 @section('content')
-<div class="container">
+<div class="container ">
   <div class="row">
-    <div class="col m8 offset-m2 s12">
+    <div class="col m8 offset-m2 s12 ">
       <div class="card hoverable">
-        <div class="card-content">
+        <div class="card-content white draken-10">
           <span class="card-title">Login</span>
           <div class="divider"></div>
           <div class="section">
@@ -43,7 +43,7 @@
               <br>
               <div class="input-field">
                 <button type="submit" name="login" class="btn waves-effect grey darken-10">Login</button>
-                <a class="right" href='auth/password/reset'>
+                <a class="right" href='./auth/passwords/reset'>
                     Forgot Your Password?
                 </a>
               </div>
